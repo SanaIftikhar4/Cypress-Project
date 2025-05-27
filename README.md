@@ -5,9 +5,9 @@ Test Cases:
 
 #1 Verify Login Feature Functionality.
 - [x] Verify login succeeds with valid email and password  
-- [x ] Verify login fails with invalid email and valid password  
-- [x ] Verify login fails with valid email and invalid password  
-- [x ] Verify login fails with both invalid email and invalid password  
-- [x ] Verify login fails when email field is empty and password is valid  
-- [x ] Verify login fails when email is valid and password field is empty  
-- [x ] Verify login fails when both email and password fields are empty 
+- [x] Verify login fails with invalid email and valid password  
+- [x] Verify login fails with valid email and invalid password  
+- [x] Verify login fails with both invalid email and invalid password  
+- [x] Verify login fails when email field is empty and password is valid  
+- [x] Verify login fails when email is valid and password field is empty  
+- [x] Verify login fails when both email and password fields are empty 
