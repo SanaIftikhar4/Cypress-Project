@@ -1,0 +1,44 @@
+In Cypress, you can take screenshots both automatically (on failure) and manually (anytime you want during the test).
+
+✅ 1. Automatic Screenshot on Test Failure
+This happens by default when you run in npx cypress run mode (headless or headed):
+
+
+npx cypress run
+📁 Screenshots are saved in:
+cypress/screenshots/
+
+✅ 2. Manual Screenshot in a Test
+Use the cy.screenshot() command:
+
+it('takes a manual screenshot', () => {
+  cy.visit('https://example.com');
+  cy.screenshot(); // takes full-page screenshot
+   
+});
+
+✅ 3. Named Screenshot
+You can also give it a custom name:
+
+cy.screenshot('homepage');
+
+📁 Saves as: cypress/screenshots/<spec-name>/homepage.png
+
+✅ 4. Screenshot a Specific Element
+Use .screenshot() on a specific element:
+
+cy.get('h1').screenshot('page-heading');
+
+/* cy.wait (5000);
+cy.log("Taking dashboard screenshot");
+cy.get("span.name").should("be.visible").screenshot("DashBoard") */
+
+✅ 5. Options (like blackout or clipping)
+
+cy.screenshot({
+  blackout: ['.sensitive-info'],  // hides sensitive info
+  capture: 'viewport'             // or 'fullPage', 'runner'
+});
+
+
+

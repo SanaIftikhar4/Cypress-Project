@@ -1,0 +1,4 @@
+This Cypress automation project is part of my TestPro Bootcamp, focused on testing the Koel music streaming application.
+The repository showcases my learning journey toward writing efficient and maintainable automation tests.
+I’ve created multiple versions of login tests using different page object and form handling approaches to explore better ways of simplifying and improving test logic.
+Each file reflects how earlier tests were modified and enhanced to improve readability, reusability, and structure.

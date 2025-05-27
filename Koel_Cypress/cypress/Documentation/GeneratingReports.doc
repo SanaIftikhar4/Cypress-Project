@@ -1,0 +1,50 @@
+To install and generate Mocha reports in Cypress, you typically use Mochawesome, which is a custom reporter for Mocha that generates beautiful and detailed HTML reports.
+
+Here’s a step-by-step guide:
+✅ Step 1: Install Required Packages
+Run the following command in your Cypress project directory:
+npm i --save-dev cypress-mochawesome-reporter
+
+✅ Step 2: Update Cypress Configuration
+If you're using Cypress v10+, update cypress.config.js:
+
+const { defineConfig } = require('cypress');
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
+    specPattern: 'cypress/e2e/**/*.cy.js',
+  },
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'Test Report',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+  },
+});
+✅ Step 3: In cypress/support/e2e.js (or commands.js for older versions):
+
+import 'cypress-mochawesome-reporter/register';
+✅ Step 4A: Run Tests
+***To run in headless:
+npx cypress run // will run all the Test
+npx cypress run --spec cypress/e2e/<testfile>.cy.js
+
+After running this a folder named 'report' will be generated in your project
+go  to html , right click , copy the path and open in browser that path
+
+
+✅ Step 4B:
+
+***To run in browser:
+npx cypress run // will run all the Test
+npx cypress run --spec cypress/e2e/<testfile>.cy.js --browser <browser name>
+✅ Command Syntax to Run in Headed Mode:
+bash
+Copy
+Edit
+npx cypress run --spec cypress/e2e/<testfile>.cy.js --browser <browser name> --headed

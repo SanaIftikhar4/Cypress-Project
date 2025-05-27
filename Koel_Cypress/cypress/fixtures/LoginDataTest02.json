@@ -1,0 +1,46 @@
+{
+  "validUser": {
+  "url":"https://qa.koel.app/#!/home",
+  "email": "sana.iftikhar@testpro.io",
+  "password": "abcd1234"
+
+  },
+  "invalidUsers": [
+    {
+      "description": "Invalid Email",
+      "email": "iftikhar@testpro.io",
+      "password": "abc1234"
+    },
+    {
+      "description": "Invalid password",
+      "email": "sana.iftikhar@testpro.io",
+      "password": "abc234"
+    },
+    {
+      "description": "Invalid Email & password",
+       "email": "sana.iftikhar@testpro.io",
+        "password": "abcd1234"
+    },
+    {
+      "description": "Empty Email",
+      "email": "",
+      "password": "abcd1234"
+    },
+    {
+      "description": "Empty Password",
+      "email": "sana.iftikhar@testpro.io",
+      "password": ""
+    },
+    
+    {
+      "description": "Both Fields Empty",
+      "email":  "sana.iftikhar@testpro.io",
+      "password": ""
+    }
+  ]
+}
+
+  
+
+
+

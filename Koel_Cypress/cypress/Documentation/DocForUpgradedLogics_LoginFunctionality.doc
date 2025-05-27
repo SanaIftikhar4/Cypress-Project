@@ -1,0 +1,3 @@
+Load fixture synchronously at the top using require() and then create tests dynamically:
+
+const testData = require('../fixtures/LoginDataUpgraded.json');  // Synchronous load

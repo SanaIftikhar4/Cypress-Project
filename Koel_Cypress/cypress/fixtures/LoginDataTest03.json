@@ -1,0 +1,44 @@
+[
+  {
+    "description": "validUser",
+    "email": "sana.iftikhar@testpro.io",
+    "password": "abcd1234",
+    "expectedResult": "pass"
+  },
+  {
+    "description": "Invalid Email",
+    "email": "iftikhar@testpro.io",
+    "password": "abc1234",
+    "expectedResult": "fail"
+  },
+  {
+    "description": "Invalid password",
+    "email": "sana.iftikhar@testpro.io",
+    "password": "wrongpass123",
+    "expectedResult": "fail"
+  },
+  {
+    "description": "Invalid Email & password",
+    "email": "wronguser@testpro.io",
+    "password": "wrongpass123",
+    "expectedResult": "fail"
+  },
+  {
+    "description": "Empty Email",
+    "email": "",
+    "password": "abcd1234",
+    "expectedResult": "fail"
+  },
+  {
+    "description": "Empty Password",
+    "email": "sana.iftikhar@testpro.io",
+    "password": "",
+    "expectedResult": "fail"
+  },
+  {
+    "description": "Both Fields Empty",
+    "email": "",
+    "password": "",
+    "expectedResult": "fail"
+  }
+]

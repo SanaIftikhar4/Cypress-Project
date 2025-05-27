@@ -1,0 +1,30 @@
+✅ How to View the Video of a Failed Test
+1. Run tests with video recording:
+
+npx cypress run
+2. Go to the video folder:
+After the test run, Cypress saves the video in:
+
+
+cypress/videos/
+Each .mp4 file corresponds to a test spec file.
+
+📁 Example Structure:
+
+cypress/
+├── videos/
+│   └── login.cy.js.mp4   ✅ ← Watch this video to see the failure
+You can open the .mp4 video file using any video player (like VLC, or even your browser).
+
+🛠️ Optional Settings in cypress.config.js:
+Make sure video recording is enabled:
+
+
+video: true,
+To disable video for passed tests only:
+
+j
+video: true,
+trashAssetsBeforeRuns: true,
+videosFolder: 'cypress/videos',
+screenshotOnRunFailure: true,

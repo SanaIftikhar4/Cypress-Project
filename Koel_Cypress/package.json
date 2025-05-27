@@ -1,0 +1,15 @@
+{
+  "name": "koel",
+  "version": "1.0.0",
+  "description": "KoelAppTesting is a Cypress-based functional test automation framework for the Koel web application. It focuses on verifying core features through UI-driven tests, ensuring that user actions—such as logging in, interacting with playlists, and navigating the app—produce the expected visual and functional outcomes. Built using the Page Object Model (POM) for better maintainability and scalability",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sana Iftikhar",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
